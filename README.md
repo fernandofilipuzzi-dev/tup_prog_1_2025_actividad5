@@ -3,3 +3,6 @@
 
 
 [Enunciado](https://docs.google.com/document/d/1Iinf1fCINz90XkobEt3AXACP61AlLI6V/preview)
+
+
+Notas: Ana opina que cuando mira ese diagrama de flujo le duele la vista, dice que se pueden hacer mejoras significativas.
