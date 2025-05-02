@@ -1,0 +1,50 @@
+Proceso super
+	Definir contProd,cantProd,cantAceptados,contRechazados,contNutri Como Entero;
+	Definir valNutri,porc Como Real;
+	Definir esRechazado Como Logico;
+	contRechazados <- 0;
+	Escribir 'Ingrese la cant de prod de la compra';
+	Leer cantProd;
+	Para contProd<-1 Hasta cantProd Hacer
+		contNutri <- 1;
+		esRechazado <- Falso;
+		Escribir 'Seleccionanado producto : ',contProd, ' de la lista de compras';
+		Repetir
+			Escribir 'Ingrese el valor nutri de la tabla del doc, línea:',contNutri;
+			Leer valNutri;
+			Segun contNutri  Hacer
+				1:
+					Si valNutri<100 O valNutri>200 Entonces
+						esRechazado <- Verdadero;
+					FinSi
+				2:
+					porc <- valNutri/100*100;
+					Si porc>15 Entonces
+						esRechazado <- Verdadedo;
+					FinSi
+				3:
+					porc <- valNutri/100*100;
+					Si porc<1 O porc>13 Entonces
+						esRechazado <- Verdadero;
+					FinSi
+				4:
+					porc <- valNutri/100*100;
+					Si porc>15 Entonces
+						esRechazado <- Verdadero;
+					FinSi
+				De Otro Modo:
+					porc <- valNutri/100*100;
+					Si porc>2 Entonces
+						esRechazado <- Verdadero;
+					FinSi
+			FinSegun
+			contNutri <- contNutri+1;
+		Hasta Que esRechazado O contNutri>5
+		Si esRechazado Entonces
+			contRechazados <- contRechazados+1;
+		FinSi
+	FinPara
+	cantAceptados <- cantProd-contRechazados;
+	Escribir 'Cantidad de rechazados: ',contRechazados;
+	Escribir 'Cantidad de aceptados: ',cantAceptados;
+FinProceso
